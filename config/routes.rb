@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :properties
 
+  get '/search' => "search#results", as: :search_results
+
   root 'properties#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

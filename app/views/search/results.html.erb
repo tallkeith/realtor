@@ -1,0 +1,5 @@
+<h1>We found...</h1>
+<p><%= @property.address[:street] %> <%= @property.address[:city] %>, <%= @property.address[:state] %> <%= @property.address[:zipcode] %></p>
+<p>Low: <%= number_to_currency(@property.valuation_range[:low]) %></p>
+<p>Med: <%= number_to_currency(@property.price) %></p>
+<p>High: <%= number_to_currency(@property.valuation_range[:high]) %></p>

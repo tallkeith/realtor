@@ -14,6 +14,8 @@ class ProspectsController < ApplicationController
 
   # GET /prospects/new
   def new
+    session[:address] = params[:search][:address]
+    session[:citystatezip] = params[:search][:citystatezip]
     @prospect = Prospect.new
   end
 
@@ -28,7 +30,7 @@ class ProspectsController < ApplicationController
 
     respond_to do |format|
       if @prospect.save
-        format.html { redirect_to @prospect, notice: 'Prospect was successfully created.' }
+        format.html { redirect_to search_results_path, notice: 'Prospect was successfully created.' }
         format.json { render :show, status: :created, location: @prospect }
       else
         format.html { render :new }

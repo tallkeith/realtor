@@ -1,1 +1,9 @@
-home.html.erb
+<h1>Enter a property address</h1>
+<%= simple_form_for :search, url: new_prospect_path, method: :get do |f| %>
+  <%= f.input :address %>
+  <%= f.input :citystatezip %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= session[:address] %>
+<%= session[:citystatezip] %>
