@@ -1,0 +1,31 @@
+<h1>Your Property Valuation!</h1>
+<h3>## Property address ## </h3>
+
+<h4> ## Zestimate Data ## </h4>
+
+<h2>Top Realtor In Your Area</h2>
+<p>#### Lee's business card graphic ####</p>
+
+<%= link_to "Search Another Address", root_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.address %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>
