@@ -1,9 +1,9 @@
 <h1>Enter a property address</h1>
 <%= simple_form_for :search, url: new_prospect_path, method: :get do |f| %>
   <%= f.input :address %>
-  <%= f.input :citystatezip %>
-  <%= f.submit 'Get Home Value'%>
+  <%= f.input :citystatezip, label: "City, State Zip"%>
+  <%= f.submit 'Get Home Value'%>	
 <% end %>
 
-<%= session[:address] %>
-<%= session[:citystatezip] %>
+<% session[:address] %>
+<% session[:citystatezip] %>
