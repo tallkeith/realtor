@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "rubillow"
 gem 'simple_form'
 
+gem 'gmaps4rails'
+gem 'geocoder'
 
 gem 'jquery-rails'
 gem 'turbolinks'

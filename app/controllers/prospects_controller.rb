@@ -5,6 +5,10 @@ class ProspectsController < ApplicationController
   # GET /prospects.json
   def index
     @prospects = Prospect.all
+    @hash = Gmaps4rails.build_markers(@prospects) do |prospect, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+    end
   end
 
   # GET /prospects/1
