@@ -1,36 +1,24 @@
 class ProspectsController < ApplicationController
   before_action :set_prospect, only: [:show, :edit, :update, :destroy]
 
-  # GET /prospects
-  # GET /prospects.json
-  def index
-    @prospects = Prospect.all
-    @hash = Gmaps4rails.build_markers(@prospects) do |prospect, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
-    end
-  end
-
-  # GET /prospects/1
-  # GET /prospects/1.json
-  def show
-  end
-
-  # GET /prospects/new
   def new
     session[:address] = params[:search][:address]
     session[:citystatezip] = params[:search][:citystatezip]
     @prospect = Prospect.new
+    @prospect.street = session[:address]
+    @prospect.citystatezip = session[:citystatezip]
+
+    geocode = Geocoder.search(@prospect.address)
+    @hash = Gmaps4rails.build_markers(geocode) do |prospect, marker|
+      marker.lat prospect.latitude
+      marker.lng prospect.longitude
+    end
   end
 
-  # GET /prospects/1/edit
-  def edit
-  end
-
-  # POST /prospects
-  # POST /prospects.json
   def create
     @prospect = Prospect.new(prospect_params)
+    @prospect.street = session[:address]
+    @prospect.citystatezip = session[:citystatezip]
 
     respond_to do |format|
       if @prospect.save
@@ -40,30 +28,6 @@ class ProspectsController < ApplicationController
         format.html { render :new }
         format.json { render json: @prospect.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /prospects/1
-  # PATCH/PUT /prospects/1.json
-  def update
-    respond_to do |format|
-      if @prospect.update(prospect_params)
-        format.html { redirect_to @prospect, notice: 'Prospect was successfully updated.' }
-        format.json { render :show, status: :ok, location: @prospect }
-      else
-        format.html { render :edit }
-        format.json { render json: @prospect.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /prospects/1
-  # DELETE /prospects/1.json
-  def destroy
-    @prospect.destroy
-    respond_to do |format|
-      format.html { redirect_to prospects_url, notice: 'Prospect was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

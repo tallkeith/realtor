@@ -22,6 +22,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
      gem 'sqlite3'
+     gem 'pry-rails'
 end
 
 group :production do

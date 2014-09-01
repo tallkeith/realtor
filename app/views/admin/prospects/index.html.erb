@@ -1,6 +1,6 @@
 <h1>Listing prospects</h1>
 
-<table>
+<table class="datatable">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +18,9 @@
         <td><%= prospect.email %></td>
         <td><%= prospect.phone %></td>
         <td><%= prospect.reason %></td>
-        <td><%= link_to 'Show', prospect %></td>
-        <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
-        <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_prospect_path(prospect) %></td>
+        <td><%= link_to 'Edit', edit_admin_prospect_path(prospect) %></td>
+        <td><%= link_to 'Destroy', admin_prospect_path(prospect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Prospect', new_prospect_path %>
+<%= link_to 'New Prospect', new_admin_prospect_path %>

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :prospects
+  resources :prospects, only: [:create, :new]
 
   resources :properties
+
+  namespace :admin do
+    resources :prospects
+  end
+
 
   get '/search' => "search#results", as: :search_results
 
