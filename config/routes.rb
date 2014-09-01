@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :properties
 
   namespace :admin do
+    root 'prospects#index'
     resources :prospects
   end
 
