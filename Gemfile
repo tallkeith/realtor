@@ -13,6 +13,12 @@ gem 'simple_form'
 gem 'gmaps4rails'
 gem 'geocoder'
 
+gem 'bootstrap-sass'
+
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+gem 'lodash-rails'
+gem 'jquery-ui-rails'
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
