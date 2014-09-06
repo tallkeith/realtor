@@ -1,1 +1,16 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+$body-bg:                               #ecf0f1;
+$font-family-sans-serif:                'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+
 @import 'bootstrap';
+
+body {
+	background-image: url('28.jpg');
+}
+
+p {
+	text-align: center;
+}

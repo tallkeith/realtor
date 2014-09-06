@@ -5,4 +5,5 @@
 
 
 jQuery ->
-  $("#prospects").dataTable();
+  $("#prospects").dataTable()
+  pagingType: 'full'
