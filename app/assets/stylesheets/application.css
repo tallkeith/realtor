@@ -1,11 +1,30 @@
 body {
 	background-image: url('28.jpg');
+	color: white;
 }
 
-h1 {
+h1, h2 {
 	text-align: center;
 }
 
 p {
 	text-align: center;
+	color: white;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  float: left;
+}
+
+.contact_info {
+	float: right;
+}
+
+.input {
+	box-shadow: 10px 10px 5px #888888;
 }

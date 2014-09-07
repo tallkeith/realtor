@@ -7,3 +7,5 @@
 jQuery ->
   $("#prospects").dataTable()
   pagingType: 'full'
+
+  
