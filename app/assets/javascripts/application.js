@@ -17,4 +17,5 @@
 //= require underscore
 //= require gmaps/google
 //= require dataTables/jquery.dataTables
+//= require bootstrap 
 
