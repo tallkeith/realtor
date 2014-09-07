@@ -28,7 +28,7 @@ class Admin::ProspectsController < AdminController
   def destroy
     @prospect = Prospect.find(params[:id])
     @prospect.destroy
-    redirect_to admin_prospect_path, :notice => "Deleted"
+    redirect_to admin_prospects_path, :notice => "Deleted"
   end
 
   def new
