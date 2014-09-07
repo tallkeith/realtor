@@ -19,3 +19,4 @@
 //= require dataTables/jquery.dataTables
 //= require bootstrap 
 
+$('.datatable').dataTable();
