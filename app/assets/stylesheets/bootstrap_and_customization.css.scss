@@ -98,6 +98,20 @@ table {
 }
 
 .prospectdata {
-  background-color: #34495e;
+  background-color: #16a085;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #e67e22;
 }
 
