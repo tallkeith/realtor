@@ -8,6 +8,10 @@ $font-family-sans-serif:                'Open Sans', 'Helvetica Neue', Helvetica
 @import "bootstrap";
 
 
+/****************************
+  General Settings
+****************************/
+
 body {
 	background: url('realestate_lead.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -23,6 +27,7 @@ h1, h2 {
 	text-align: center;
 	text-shadow: 2px 2px 4px #000000;
 	color: white;
+  padding-bottom: 2%
 }
 
 p {
@@ -31,23 +36,68 @@ p {
 	text-shadow: 2px 2px 4px #000000;
 }
 
-.box {
-  margin: 5px;
-  width: 214px;
+
+
+/****************************
+  Home page - Property search page
+****************************/
+
+label {
+  color: white;
+  font-size: 18px;
+  padding-right: 10px;
 }
 
-.box img {
-  float: left;
+fieldset {
+  border: 1px solid rgb(255,232,57);
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
-.contact_info {
-	
+
+
+/****************************
+  New prospects page
+****************************/
+
+.mapbox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding-bottom: 5%;
+  border-style: solid;
+  border-width: 5px;
 }
+#map {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+
+.field {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.actions {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+
+
+/****************************
+  Prospect Database Page
+****************************/
 
 table {
-	color: white
+  color: white
 }
 
 .prospectdata {
   background-color: #34495e;
 }
+
