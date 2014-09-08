@@ -1,33 +1,34 @@
 <h1>Listing prospects</h1>
-
-<table class="datatable display" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Reason</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @prospects.each do |prospect| %>
+<div class="prospectdata">
+  <table class="datatable display table table-condensed table-hover" cellspacing="0" width="100%">
+    <thead>
       <tr>
-        <td><%= prospect.name %></td>
-        <td><%= prospect.email %></td>
-        <td><%= prospect.phone %></td>
-        <td><%= prospect.reason %></td>
-        <td><%= link_to 'Show', admin_prospect_path(prospect) %></td>
-        <td><%= link_to 'Edit', edit_admin_prospect_path(prospect) %></td>
-        <td><%= link_to 'Destroy', admin_prospect_path(prospect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Reason</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+
+    <tbody>
+      <% @prospects.each do |prospect| %>
+        <tr>
+          <td><%= prospect.name %></td>
+          <td><%= prospect.email %></td>
+          <td><%= prospect.phone %></td>
+          <td><%= prospect.reason %></td>
+          <td><%= link_to 'Show', admin_prospect_path(prospect) %></td>
+          <td><%= link_to 'Edit', edit_admin_prospect_path(prospect) %></td>
+          <td><%= link_to 'Destroy', admin_prospect_path(prospect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Prospect', new_admin_prospect_path %>
