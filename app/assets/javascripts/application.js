@@ -16,7 +16,10 @@
 //= require_tree .
 //= require underscore
 //= require gmaps/google
+//= require bootstrap
 //= require dataTables/jquery.dataTables
-//= require bootstrap 
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 
-$('.datatable').dataTable();
+$(document).ready(function() {
+  $('.datatable').dataTable();
+})
