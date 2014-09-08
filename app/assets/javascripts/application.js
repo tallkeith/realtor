@@ -20,4 +20,6 @@
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 
-$('.datatable').dataTable();
+$(document).ready(function() {
+  $('.datatable').dataTable();
+})
