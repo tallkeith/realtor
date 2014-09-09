@@ -5,6 +5,6 @@ class ProspectMailer < ActionMailer::Base
     @prospect = prospect
     @url = "http://tallrealtor.herokuapp.com"
     mail(:to => prospect.email, :bcc => "keithpnash@gmail.com", :subject => "Your home valuation")
-
+  end
 
 end
