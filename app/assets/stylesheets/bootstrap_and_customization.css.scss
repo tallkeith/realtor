@@ -40,6 +40,8 @@ p {
 
 
 
+
+
 /****************************
   Home page - Property search page
 ****************************/
@@ -52,14 +54,12 @@ label {
 
 fieldset {
   border: 1px solid rgb(255,232,57);
-  margin-left: auto;
+  margin-left: 0 auto;
   margin-right: auto;
   width: 70%;
 }
 
-.container {
-  padding-left: 25%;
-}
+
 
 /****************************
   New prospects page
@@ -74,7 +74,7 @@ fieldset {
 #map {
   margin-left: auto;
   margin-right: auto;
-  width: 100%
+  width: 100%;
 }
 
 
