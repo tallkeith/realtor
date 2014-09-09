@@ -23,7 +23,7 @@ class ProspectsController < ApplicationController
     respond_to do |format|
       if @prospect.save
         # Generates and sends email to specified prospect email
-        ProspectMailer.registration_confirmation(@prospect).deliver
+        ProspectMailer.welcome_email(@prospect).deliver
 
         format.html { redirect_to search_results_path, notice: 'Prospect was successfully created.' }
         format.json { render :show, status: :created, location: @prospect }
