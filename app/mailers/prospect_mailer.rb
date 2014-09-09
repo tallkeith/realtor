@@ -7,4 +7,5 @@ class ProspectMailer < ActionMailer::Base
     mail(:to => prospect.email, :bcc => "keithpnash@gmail.com", :subject => "Your home valuation")
   end
 
+
 end
