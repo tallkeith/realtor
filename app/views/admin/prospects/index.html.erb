@@ -1,15 +1,15 @@
 <h1>Listing prospects</h1>
 <div class="prospectdata">
-  <table class="datatable display table table-condensed table-hover" cellspacing="0" width="100%">
+  <table class="datatable display table table-hover table-responsive table-bordered" cellspacing="0" width="100%">
     <thead>
       <tr>
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
         <th>Reason</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Street</th>
+        <th>City, State Zip</th>
+        <th>Action</th>
       </tr>
     </thead>
 
@@ -20,6 +20,8 @@
           <td><%= prospect.name %></td>
           <td><%= prospect.email %></td>
           <td><%= prospect.phone %></td>
+          <td><%= prospect.street %></td>
+          <td><%= prospect.citystatezip %></td>
           <td><%= prospect.reason %></td>
           <td><%= link_to 'Show', admin_prospect_path(prospect) %></td>
           <td><%= link_to 'Edit', edit_admin_prospect_path(prospect) %></td>

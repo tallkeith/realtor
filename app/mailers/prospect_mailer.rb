@@ -3,7 +3,7 @@ class ProspectMailer < ActionMailer::Base
 
   def welcome_email(prospect)
     @prospect = prospect
-    @url = "http://tallkeith.herokuapp.com"
+    @url = "http://tallrealtor.herokuapp.com"
     mail(:to => prospect.email, :bcc => "keithpnash@gmail.com", :subject => "Your home valuation")
 
 

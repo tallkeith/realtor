@@ -1,9 +1,10 @@
 <h1>We found...</h1>
-<p><%= @property.address[:street] %> <%= @property.address[:city] %>, <%= @property.address[:state] %> <%= @property.address[:zipcode] %></p>
-<p>Low: <%= number_to_currency(@property.valuation_range[:low]) %></p>
-<p>Med: <%= number_to_currency(@property.price) %></p>
-<p>High: <%= number_to_currency(@property.valuation_range[:high]) %></p>
+<div class="results">
+<h2><%= @property.address[:street] %> <%= @property.address[:city] %>, <%= @property.address[:state] %> <%= @property.address[:zipcode] %></h2>
+<h2>Low: <%= number_to_currency(@property.valuation_range[:low]) %></h2>
+<h2>Med: <%= number_to_currency(@property.price) %></h2>
+<h2>High: <%= number_to_currency(@property.valuation_range[:high]) %></h2>
+</div>
 
 
-
-<%= link_to "Search for another property", root_path %>
+<p><%= link_to "Search for another property", root_path %></p>
