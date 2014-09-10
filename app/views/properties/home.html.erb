@@ -2,11 +2,14 @@
 <h2>2014 Real Estate Values Available Instantly!</h2>
 
 <div class="container">
-	<%= simple_form_for :search,  url: new_prospect_path, :html => { :class => 'form-horizontal' }, method: :get do |f| %>
-	  <%= f.input :address, label: false, input_html: {style: 'height:50px; width:70%;'}, :placeholder => "Street Address" %><br>
-	  <%= f.input :citystatezip, label: false, input_html: {style: 'height:50px; width:70%;'}, :placeholder => "City, State Zip", class: "col-lg-1 col-offset-6 centered"%> <br>
-  	<%= f.submit 'Get Home Value', class: "btn btn-default btn-lg btn-warning center-block"%>	<br>
+	<%= simple_form_for :search,  url: new_prospect_path, method: :get do |f| %>
+	<div class="form-inline">
+	  <%= f.input :address, label: false, :placeholder => "Street Address", input_html: {style: 'height:50px; width:50%;'} %><br>
+	  <%= f.input :citystatezip, label: false, :placeholder => "City, State Zip", input_html: {style: 'height:50px; width:50%;'}%>
+	 </div> <br>
 </div>
+  	<%= f.submit 'Get Home Value', class: "btn btn-default btn-lg btn-warning center-block"%>	<br>
+
 <% end %>
 
 <% session[:address] %>

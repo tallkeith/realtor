@@ -52,14 +52,13 @@ label {
   padding-right: 10px;
 }
 
-fieldset {
-  border: 1px solid rgb(255,232,57);
-  margin-left: 0 auto;
-  margin-right: auto;
-  width: 70%;
+
+
+.container {
+  float: left;
+  margin-left: 25%;
+  width: 100%;
 }
-
-
 
 /****************************
   New prospects page
@@ -68,25 +67,27 @@ fieldset {
 .mapbox {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
   padding-bottom: 5%; 
 }
 #map {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  float: left;
 }
 
 
 .field {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 65%;
+  float: right;
 }
 .actions {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  
 }
 
 
@@ -97,8 +98,16 @@ fieldset {
 ****************************/
 .results {
   font-size: 20px;
-}
+  background-color: #2c3e50;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  border-style: solid;
+  box-shadow: 2px 2px 2px 2px #000000;
+  border-radius: 10px 10px 10px 10px;
 
+}
 
 
 
