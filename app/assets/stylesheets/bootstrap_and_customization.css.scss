@@ -40,8 +40,6 @@ p {
 
 
 
-
-
 /****************************
   Home page - Property search page
 ****************************/
@@ -67,12 +65,12 @@ label {
 .mapbox {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 85%;
   padding-bottom: 5%; 
 }
 #map {
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 2%;
   width: 100%;
   float: left;
 }
@@ -85,7 +83,7 @@ label {
   float: right;
 }
 .actions {
-  margin-left: auto;
+  margin-left: 35%;
   margin-right: auto;
   
 }
