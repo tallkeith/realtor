@@ -19,7 +19,7 @@ class ProspectsController < ApplicationController
   def update
 
     respond_to do |format|
-      if @prospect.save
+      if @prospect.update_attributes(prospect_params)
         # Generates and sends email to specified prospect email
         ProspectMailer.welcome_email(@prospect).deliver
 

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :prospects, only: [:create, :new]
+  resources :prospects, only: [:update, :new]
 
   resources :properties
 
