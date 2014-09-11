@@ -1,5 +1,5 @@
 class ProspectsController < ApplicationController
-  before_action :set_prospect, only: [:show, :edit, :update, :destroy]
+  before_action :set_prospect, only: [:update]
 
   def new
     session[:address] = params[:search][:address]
@@ -7,6 +7,7 @@ class ProspectsController < ApplicationController
     @prospect = Prospect.new
     @prospect.street = session[:address]
     @prospect.citystatezip = session[:citystatezip]
+    @prospect.save(validate: false)
 
     geocode = Geocoder.search(@prospect.address)
     @hash = Gmaps4rails.build_markers(geocode) do |prospect, marker|
@@ -15,13 +16,10 @@ class ProspectsController < ApplicationController
     end
   end
 
-  def create
-    @prospect = Prospect.new(prospect_params)
-    @prospect.street = session[:address]
-    @prospect.citystatezip = session[:citystatezip]
+  def update
 
     respond_to do |format|
-      if @prospect.save
+      if @prospect.update_attributes(prospect_params)
         # Generates and sends email to specified prospect email
         ProspectMailer.welcome_email(@prospect).deliver
 
