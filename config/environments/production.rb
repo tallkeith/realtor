@@ -85,7 +85,6 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.assets.compile = true
   config.assets.digest = true
-  
- 
 
+  config.action_mailer.default_url_options = { :host => "http://tallrealtor.herokuapp.com" }
 end
