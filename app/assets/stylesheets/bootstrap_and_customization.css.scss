@@ -115,10 +115,19 @@ label {
 
 table {
   color: white;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .prospectdata {
   background-color: #16a085;
+  border-style: solid;
+  border-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1% 1% 1% 1%;
+  text-shadow: none;
 }
 
 /* unvisited link */
@@ -139,3 +148,10 @@ th {
   text-align: center;
 }
 
+.dataTables_info {
+  color: white;
+}
+
+li {
+  color: white;
+}
