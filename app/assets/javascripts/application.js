@@ -21,5 +21,7 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 
 $(document).ready(function() {
-  $('.datatable').dataTable();
+  $('.datatable').dataTable( {
+  	"order": [[ 0, "desc" ]]
+  } );
 })

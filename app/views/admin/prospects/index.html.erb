@@ -1,10 +1,11 @@
-//cdn.datatables.net/plug-ins/725b2a2115b/sorting/date-dd-MMM-yyyy.js
+
 
 <h1>Listing prospects</h1>
 <div class="prospectdata">
   <table class="datatable display table table-hover table-responsive table-bordered" cellspacing="0" width="100%">
     <thead>
       <tr>
+        <th>Created</th>
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
@@ -12,8 +13,8 @@
         <th>Street</th>
         <th>City, State Zip</th>
         <th>Action</th>
-        <th></th>
-        <th></th>
+        
+        
       </tr>
     </thead>
 
@@ -21,15 +22,16 @@
     <tbody>
       <% @prospects.each do |prospect| %>
         <tr>
+          <td><%= prospect.created_at %></td>
           <td><%= prospect.name %></td>
           <td><%= prospect.email %></td>
           <td><%= prospect.phone %></td>
           <td><%= prospect.street %></td>
           <td><%= prospect.citystatezip %></td>
           <td><%= prospect.reason %></td>
-          <td><%= link_to 'Show', admin_prospect_path(prospect) %></td>
-          <td><%= link_to 'Edit', edit_admin_prospect_path(prospect) %></td>
-          <td><%= link_to 'Destroy', admin_prospect_path(prospect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', admin_prospect_path(prospect) %>
+          <%= link_to 'Edit', edit_admin_prospect_path(prospect) %>
+          <%= link_to 'Destroy', admin_prospect_path(prospect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
