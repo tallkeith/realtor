@@ -4,12 +4,13 @@ This is an app that I built for a realtor in California. This app first asks for
 
 On the second page, you will find a google map of the address entered, and a contact form. The details entered here will then be saved to the database along with the address entered.
 
-On the third page, the home's valuatin will be shown, along with contact info for the realtor. Also, an email is generated and sent to the address provided confirming that the realtor has received your info and will be contacting you shortly about it.
+On the third page, the home's valuation will be shown, along with contact info for the realtor. Also, an email is generated and sent to the address provided confirming that the realtor has received your info and will be contacting you shortly about it.
 
 Check it out: www.bakersfieldhomeworth.herokuapp.com 
+(Don't worry, this is just the test site, not the production site. No one will be contacting you regarding your inquiry. Unless you want to hire me. Then, let's talk!)
 
 Also, the back end of this app was made with datatables for rails. If you are interested, go to www.bakersfieldhomeworth.herokuapp.com/admin and use the username of "talladmin" and password "talladmin". 
-I am a Miami Dolphins fan, so the color scheme I picked is aqua and orange for the datatables.
+I am a Miami Dolphins fan, so the color scheme I picked is aqua and orange for the datatables. Yes, it is ugly. No, I don't care =P
 
 Notable Gems used:
 Rubillow - Zillow API for Ruby
