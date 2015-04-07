@@ -13,11 +13,18 @@ Also, the back end of this app was made with datatables for rails. If you are in
 I am a Miami Dolphins fan, so the color scheme I picked is aqua and orange for the datatables. Yes, it is ugly. No, I don't care =P
 
 Notable Gems used:
-Rubillow - Zillow API for Ruby
-simple_form - for data collection
-bootstrap_form - pretty forms
-gmaps4rails - put the map on my app
-geocoder - placed the point of interest
-bootstrap-sass - Because Bootstrap rules!
-jquery-datatables-rails', '~> 2.2.3' - Made my datatables look all spiffy
-mandrill-api - Sends out the emails
+* Rubillow - Zillow API for Ruby
+
+* simple_form - for data collection
+
+* bootstrap_form - pretty forms
+
+* gmaps4rails - put the map on my app
+
+* geocoder - placed the point of interest
+
+* bootstrap-sass - Because Bootstrap rules!
+
+* jquery-datatables-rails', '~> 2.2.3' - Made my datatables look all spiffy
+
+* mandrill-api - Sends out the emails
