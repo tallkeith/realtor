@@ -1,28 +1,30 @@
-== README
+== Home Valuation App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app that I built for a realtor in California. This app first asks for your address. This address is then saved to the database (the realtor wanted to capture partial leads as well)
 
-Things you may want to cover:
+On the second page, you will find a google map of the address entered, and a contact form. The details entered here will then be saved to the database along with the address entered.
 
-* Ruby version
+On the third page, the home's valuation will be shown, along with contact info for the realtor. Also, an email is generated and sent to the address provided confirming that the realtor has received your info and will be contacting you shortly about it.
 
-* System dependencies
+Check it out: www.bakersfieldhomeworth.herokuapp.com 
+(Don't worry, this is just the test site, not the production site. No one will be contacting you regarding your inquiry. Unless you want to hire me. Then, let's talk!)
 
-* Configuration
+Also, the back end of this app was made with datatables for rails. If you are interested, go to www.bakersfieldhomeworth.herokuapp.com/admin and use the username of "talladmin" and password "talladmin". 
+I am a Miami Dolphins fan, so the color scheme I picked is aqua and orange for the datatables. Yes, it is ugly. No, I don't care =P
 
-* Database creation
+Notable Gems used:
+* Rubillow - Zillow API for Ruby
 
-* Database initialization
+* simple_form - for data collection
 
-* How to run the test suite
+* bootstrap_form - pretty forms
 
-* Services (job queues, cache servers, search engines, etc.)
+* gmaps4rails - put the map on my app
 
-* Deployment instructions
+* geocoder - placed the point of interest
 
-* ...
+* bootstrap-sass - Because Bootstrap rules!
 
+* jquery-datatables-rails', '~> 2.2.3' - Made my datatables look all spiffy
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* mandrill-api - Sends out the emails
