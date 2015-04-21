@@ -4,7 +4,7 @@ class ProspectMailer < ActionMailer::Base
   def welcome_email(prospect)
     @prospect = prospect
     @url = ENV["URL"]
-    mail(:to => prospect.email, :bcc => "keithpnash@gmail.com", :subject => "Your Home Valuation")
+    mail(:to => prospect.email, :bcc => "contact@bakersfieldhomeworth.com", :subject => "Your Home Valuation")
   end
 
 end
