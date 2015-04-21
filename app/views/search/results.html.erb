@@ -1,10 +1,15 @@
 <div class="results">
-<h1>We found...</h1>
+	<h1>We found...</h1>
 
-<h2><%= @property.address[:street] %> <br><%= @property.address[:city] %>, <%= @property.address[:state] %> <%= @property.address[:zipcode] %></h2>
-<h2>Low: <%= number_to_currency(@property.valuation_range[:low]) %></h2>
-<h2>Med: <%= number_to_currency(@property.price) %></h2>
-<h2>High: <%= number_to_currency(@property.valuation_range[:high]) %></h2>
+	<h2><%= @property.address[:street] %> <br><%= @property.address[:city] %>, <%= @property.address[:state] %> <%= @property.address[:zipcode] %></h2>
+	<h2>Low: <%= number_to_currency(@property.valuation_range[:low]) %></h2>
+	<h2>Med: <%= number_to_currency(@property.price) %></h2>
+	<h2>High: <%= number_to_currency(@property.valuation_range[:high]) %></h2>
+
+	<div class="row">
+		<%= link_to "Developer Profile", "http://www.tallkeith.com" %>
+		<%=link_to "Get another Valuation", properties_home_path, class: "btn btn-success"%>
+	</div>
 </div>
 
 
